@@ -261,7 +261,17 @@
             ← 目次へ戻る
         </a>
 
-    </section>
+       </section>
+
+    <script>
+        window.addEventListener("load", function () {
+            const containers = document.querySelectorAll(".story-container");
+
+            containers.forEach(function (container) {
+                container.scrollLeft = container.scrollWidth;
+            });
+        });
+    </script>
 
 </body>
 </html>
