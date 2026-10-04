@@ -104,8 +104,7 @@
             height: 75vh;
             overflow-x: auto;
             overflow-y: hidden;
-            display: flex;
-            align-items: flex-start;
+            position: relative;
         }
         .story {
             writing-mode: vertical-rl;
@@ -116,8 +115,10 @@
             font-size: 18px;
             line-height: 2;
             white-space: pre-wrap;
-        }
 
+            position: relative;
+            top: 0;
+        }
         .back {
             display: block;
             text-align: center;
@@ -174,12 +175,9 @@
         </h2>
 
         <div class="story-container">
-            <div class="story">
-                これは電子部誌の試作品です。
+            <div class="story">これは電子部誌の試作品です。
                 ここに作品の文章が入ります。
-                縦書きで表示されるため、
-                スマートフォンでも小説を読むような感覚で
-                読むことができます。
+                縦書きで表示されるため、スマートフォンでも小説を読むような感覚で読むことができます。
                 
                 文章が長くなっても大丈夫です。
                 三万文字程度の作品も、
