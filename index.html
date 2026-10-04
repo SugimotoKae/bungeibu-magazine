@@ -1,39 +1,224 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"><!-- TEST -->
 <head>
     <meta charset="UTF-8">
-    <title>文芸部電子部誌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>文芸部 電子部誌</title>
 
     <style>
+        /* ページ全体 */
         body {
-            background-color: #f8f5ed;
+            margin: 0;
+            background: #f7f4ed;
             color: #222;
-            font-family: serif;
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+        }
+
+        /* 表紙 */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         h1 {
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        /* ボタン */
+        .button {
+            display: inline-block;
+            padding: 14px 35px;
+            border: 1px solid #333;
+            color: #222;
+            text-decoration: none;
+            background: white;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #222;
+            color: white;
+        }
+
+        /* 目次 */
+        .contents {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .contents h2 {
             text-align: center;
+            font-weight: normal;
+            margin-bottom: 50px;
+        }
+
+        .work {
+            display: block;
+            padding: 20px;
+            margin: 15px 0;
+            border-bottom: 1px solid #aaa;
+            color: #222;
+            text-decoration: none;
+            background: white;
+        }
+
+        .work:hover {
+            background: #eee;
+        }
+
+        .author {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 作品ページ */
+        .story-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .story-title {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .story {
             writing-mode: vertical-rl;
-            height: 70vh;
-            margin: 40px auto;
+            height: 75vh;
+            margin: 0 auto;
             font-size: 18px;
             line-height: 2;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>文芸部 電子部誌</h1>
+    <!-- 表紙 -->
+    <section class="cover">
 
-    <div class="story">
-        これは電子部誌の試作品です。
-        ここに文芸部の作品が入ります。
-        縦書きで文章を読むことができます。
-    </div>
+        <h1>文芸部 電子部誌</h1>
+
+        <div class="subtitle">
+            文化祭 2026
+        </div>
+
+        <a href="#contents" class="button">
+            部誌を読む
+        </a>
+
+    </section>
+
+
+    <!-- 目次 -->
+    <section id="contents" class="contents">
+
+        <h2>目次</h2>
+
+        <a href="#story1" class="work">
+            作品一　「タイトル未定」
+            <div class="author">作者：文芸部員</div>
+        </a>
+
+        <a href="#story2" class="work">
+            作品二　「タイトル未定」
+            <div class="author">作者：文芸部員</div>
+        </a>
+
+        <a href="#story3" class="work">
+            作品三　「タイトル未定」
+            <div class="author">作者：文芸部員</div>
+        </a>
+
+    </section>
+
+
+    <!-- 作品1 -->
+    <section id="story1" class="story-page">
+
+        <h2 class="story-title">
+            作品一　「タイトル未定」
+        </h2>
+
+        <div class="story">
+            これは電子部誌の試作品です。
+
+            ここに作品の文章が入ります。
+
+            縦書きで表示されるため、
+            スマートフォンでも小説を読むような感覚で
+            読むことができます。
+
+            文章が長くなっても大丈夫です。
+            三万文字程度の作品も、
+            この形式で掲載できます。
+        </div>
+
+        <a href="#contents" class="back">
+            ← 目次へ戻る
+        </a>
+
+    </section>
+
+
+    <!-- 作品2 -->
+    <section id="story2" class="story-page">
+
+        <h2 class="story-title">
+            作品二　「タイトル未定」
+        </h2>
+
+        <div class="story">
+            ここに二つ目の作品が入ります。
+
+            実際の部誌では、
+            この部分を部員の作品に置き換えます。
+        </div>
+
+        <a href="#contents" class="back">
+            ← 目次へ戻る
+        </a>
+
+    </section>
+
+
+    <!-- 作品3 -->
+    <section id="story3" class="story-page">
+
+        <h2 class="story-title">
+            作品三　「タイトル未定」
+        </h2>
+
+        <div class="story">
+            ここに三つ目の作品が入ります。
+        </div>
+
+        <a href="#contents" class="back">
+            ← 目次へ戻る
+        </a>
+
+    </section>
 
 </body>
 </html>
