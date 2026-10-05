@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>鈴の音の向こうに｜感個鳥</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f7f4ed;
+            color: #222;
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+        }
+
+        .story-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .story-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: normal;
+        }
+
+        .story-container {
+            width: 100%;
+            height: 75vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .story {
+            writing-mode: vertical-rl;
+            height: 75vh;
+            width: max-content;
+            margin: 0;
+            padding: 0 30px;
+            font-size: 18px;
+            line-height: 2;
+            white-space: pre-wrap;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="story-page">
+
+        <h1 class="story-title">
+            「鈴の音の向こうに」
+        </h1>
+
+        <div class="story-container">
+
+            <div class="story">
+
+ここに今の
+「旅支度をして、予定をもう一度確認して、朝早く起きて……」
+から始まる作品本文を全部入れる。
+
+            </div>
+
+        </div>
+
+        <a href="index.html#contents" class="back">
+            ← 目次へ戻る
+        </a>
+
+    </section>
+
+
+    <script>
+        window.addEventListener("load", function () {
+            const container = document.querySelector(".story-container");
+
+            container.scrollLeft = container.scrollWidth;
+        });
+    </script>
+
+</body>
+</html>
